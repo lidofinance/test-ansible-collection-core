@@ -7,4 +7,3 @@
         dest: '/tmp/{{ lc_filename }}'
         content: 'test file'
         mode: "0644"
-

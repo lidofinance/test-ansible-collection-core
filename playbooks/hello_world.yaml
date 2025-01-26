@@ -4,15 +4,15 @@
   gather_facts: false
   pre_tasks:
     - name: Reporting group_vars value from the collection
-      debug:
-        var: lc_example_of_group_var  
+      ansible.builtin.debug:
+        var: lc_example_of_group_var
   tasks:
     - name: Lookup plugin
-      debug:
+      ansible.builtin.debug:
         msg: "{{ lookup('lidofinance.core.hello_world') }}"
     - name: Callig a module
       lidofinance.core.hello_world:
       register: lc_hello_message
     - name: Reporting
-      debug:
+      ansible.builtin.debug:
         var: lc_hello_message.message

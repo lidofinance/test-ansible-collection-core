@@ -4,4 +4,3 @@
   gather_facts: false
   roles:
     - role: lidofinance.core.docker_prune
-

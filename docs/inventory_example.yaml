@@ -1,0 +1,15 @@
+---
+lc_example:
+  hosts:
+    mock_host:
+      ansible_connection: local
+
+lc_docker:
+  hosts:
+    host1: # should be created by provisioning
+
+lc_file:
+  hosts:
+    mock_host:
+  vars:
+    lc_filename: 'lidofinance.core.example.txt'

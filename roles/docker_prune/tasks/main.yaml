@@ -1,0 +1,31 @@
+---
+- name: Configure prune unit
+  become: true
+  ansible.builtin.template:
+    src: docker_prune.service.j2
+    dest: /etc/systemd/system/docker_prune.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Systemd reload
+
+- name: Configure prune timer
+  become: true
+  ansible.builtin.template:
+    src: docker_prune.timer.j2
+    dest: /etc/systemd/system/docker_prune.timer
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Systemd reload
+
+- name: Flush handlers
+  asible.builtin.meta: flush_handlers
+
+- name: Enable and start timer
+  become: true
+  ansible.builtin.systemd:
+    name: docker_prune.timer
+    daemon_reload: true
+    enabled: true
+    state: started

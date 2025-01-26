@@ -1,0 +1,5 @@
+---
+lc_example_of_group_var:
+  Group are loaded every time import_playbooks is used,
+  so collections can have own group vars.
+  They are not visible outside of the imported playbook

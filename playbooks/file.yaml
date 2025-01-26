@@ -1,0 +1,10 @@
+---
+- name: Example of a file
+  hosts: lc_file
+  tasks:
+    - name: Touch
+      ansible.builtin.copy:
+        dest: '/tmp/{{ lc_filename }}'
+        content: 'test file'
+        mode: "0644"
+

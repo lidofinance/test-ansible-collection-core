@@ -1,0 +1,16 @@
+---
+namespace: lidofinance
+name: core
+version: 1.0.0
+readme: README.md
+authors:
+  - George Shuklin <george.shuklin@gmail.com>
+description: Test public collection
+license:
+  - MIT
+tags: [core]
+dependencies: {}
+repository: https://github.com/lidofinance/test-ansible-collection-core
+documentation: https://github.com/lidofinance/test-ansible-collection-core
+homepage: https://github.com/lidofinance/test-ansible-collection-core
+issues: https://github.com/lidofinance/test-ansible-collection-core

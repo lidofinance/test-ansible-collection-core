@@ -1,0 +1,7 @@
+---
+- name: Configure docker pruning
+  hosts: lc_docker  # lidofinance.core (collection's name) => 'lc_' prefix
+  gather_facts: false
+  roles:
+    - role: lidofinance.core.docker_prune
+

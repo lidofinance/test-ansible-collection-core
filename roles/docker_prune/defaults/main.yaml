@@ -1,0 +1,6 @@
+---
+# docker_prune_type: image | container
+docker_prune_type: image
+# docker_prune_calendar: see man systemd.time (OnCalendar section)
+# possible reasonable values: hourly, daily, weekly
+docker_prune_calendar: daily
